@@ -18,7 +18,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
 }
 
 header {
@@ -27,12 +27,18 @@ header {
   width: 100%;
   border: 2px;
   border-bottom: 5px solid rgb(4, 34, 34);
-  
+  position: fixed;
 }
 
 h1 {
   font-family: "Poppins", sans-serif;
   font-style: italic;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .cabecalho {
@@ -43,7 +49,7 @@ h1 {
   justify-content: space-between;
 }
 
-#botão {
+.botão {
   font-family: "Sofia Sans", "Sans Serif";
   font-size: 15px;
   padding: 10px;
@@ -97,19 +103,78 @@ a li:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  height: 570px;
+
+  height: 753px;
   width: 100%;
+  background: rgb(0, 87, 67);
   background: linear-gradient(
     180deg,
-    rgba(0, 87, 67, 1) 5%,
-    rgba(9, 121, 99, 1) 20%,
-    rgba(0, 213, 255, 0) 100%
+    rgba(0, 87, 67, 1) 0%,
+    rgba(9, 121, 99, 1) 11%,
+    rgba(0, 212, 255, 0) 100%
   );
 }
 
 .ola {
-  font-size: 40px;
+  font-size: 50px;
+  transition: 1s;
+}
+
+.ola:hover {
+  transform: scale(1.1);
+}
+
+h2 {
+  display: inline-block;
+  align-self: center;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.285);
+  border-radius: 0 12px;
+  transition: 1s;
+  margin: 10px;
+}
+
+h2:hover {
+  transform: scale(1.1);
+  border-radius: 0;
+}
+
+.fundo {
+  background: rgba(6, 58, 63, 0.673);
   display: flex;
-  position: absolute;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 96vh;
+  margin: 15px 0;
+  border-top: solid rgb(15, 88, 84) 5px;
+  border-bottom: solid rgb(15, 88, 84) 5px;
+}
+
+.recipiente {
+  background: rgba(1, 162, 98, 0.286);
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: fit-content;
+  padding: 15px 20px;
+  border-left: solid rgb(15, 88, 84) 5px;
+  border-right: solid rgb(15, 88, 84) 5px;
+}
+
+#inputField {
+  width: 250px;
+}
+
+#outputField {
+  height: fit-content;
+  width: fit-content;
+}
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
